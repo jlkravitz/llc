@@ -1,0 +1,50 @@
+---
+// index.astro
+import Layout from "../layouts/Layout.astro";
+
+const email = "contact@magicclay.org";
+---
+
+<Layout title="Magic Clay">
+  <main class="flex flex-col h-screen bg-blue-400 text-white">
+    <div class="p-6 m-auto text-center">
+      <h1 class="text-6xl font-bold">Magic Clay</h1>
+      <p class="text-xl mt-2 italic">
+        Innovative Solutions, with a Human Touch
+      </p>
+      <img
+        src="/logo.png"
+        alt="Magic Clay Logo"
+        class="mx-auto my-4 w-1/4 rounded-full shadow-2xl"
+      />
+    </div>
+
+    <section class="flex-grow container mx-auto p-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white text-black rounded-lg shadow p-6">
+          <h3 class="text-2xl font-semibold mb-3">Our Approach</h3>
+          <p>
+            At Magic Clay, we believe in a human-centered approach to
+            technology. We craft solutions that are not only innovative but also
+            intuitive and user-friendly.
+          </p>
+        </div>
+        <div class="bg-white text-black rounded-lg shadow p-6">
+          <h3 class="text-2xl font-semibold mb-3">Our Services</h3>
+          <p>
+            From web development to custom software solutions, we provide a wide
+            range of services to help businesses thrive in the digital era.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="p-4 bg-blue-500">
+      <p class="text-center">
+        <a href="mailto:{{email}}" class="text-white hover:text-blue-200"
+          >{email}</a
+        >
+      </p>
+    </footer>
+  </main>
+</Layout>
