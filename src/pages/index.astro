@@ -1,6 +1,7 @@
 ---
 // index.astro
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 const email = "contact@magicclay.org";
 ---
@@ -12,10 +13,12 @@ const email = "contact@magicclay.org";
       <p class="text-xl mt-2 italic">
         Innovative Solutions, with a Human Touch
       </p>
-      <img
-        src="/logo.png"
+      <Image
+        src="/public/logo.png"
         alt="Magic Clay Logo"
-        class="mx-auto my-4 w-1/4 rounded-full shadow-2xl"
+        width="300"
+        height="200"
+        class="mx-auto my-4 rounded-full shadow-2xl"
       />
     </div>
 
