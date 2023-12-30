@@ -1,5 +1,6 @@
 ---
 // index.astro
+import { MyConfetti } from "../components/MyConfetti.jsx";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
@@ -7,6 +8,7 @@ const email = "hello@magicclay.io";
 ---
 
 <Layout title="Magic Clay">
+  <MyConfetti client:only />
   <main class="flex flex-col h-screen bg-blue-400 text-white">
     <div class="p-6 m-auto text-center">
       <h1 class="text-6xl font-bold">Magic Clay</h1>
@@ -23,8 +25,8 @@ const email = "hello@magicclay.io";
     </div>
 
     <section class="flex-grow container mx-auto p-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-white text-black rounded-lg shadow p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white text-black rounded-lg shadow-lg p-6">
           <h3 class="text-2xl font-semibold mb-3">Our Approach</h3>
           <p>
             At Magic Clay, we believe in a human-centered approach to
@@ -32,7 +34,7 @@ const email = "hello@magicclay.io";
             intuitive and user-friendly.
           </p>
         </div>
-        <div class="bg-white text-black rounded-lg shadow p-6">
+        <div class="bg-white text-black rounded-lg shadow-lg p-6">
           <h3 class="text-2xl font-semibold mb-3">Our Services</h3>
           <p>
             From web development to custom software solutions, we provide a wide
